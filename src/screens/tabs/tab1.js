@@ -1,19 +1,67 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
-export default class tab1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
+import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
+export default class ListThumbnailExample extends Component {
   render() {
     return (
-      <View>
-        <Text> tab1 </Text>
-      </View>
+      <Container>
+        <Content>
+          <List>
+          <ListItem thumbnail>
+              <Left>
+                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
+              </Left>
+              <Body>
+                <Text>News Article</Text>
+                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
+              </Body>
+              <Right>
+                <Button transparent>
+                  <Text>View</Text>
+                </Button>
+              </Right>
+            </ListItem><ListItem thumbnail>
+              <Left>
+                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
+              </Left>
+              <Body>
+                <Text>News Article</Text>
+                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
+              </Body>
+              <Right>
+                <Button transparent>
+                  <Text>View</Text>
+                </Button>
+              </Right>
+            </ListItem><ListItem thumbnail>
+              <Left>
+                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
+              </Left>
+              <Body>
+                <Text>News Article</Text>
+                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
+              </Body>
+              <Right>
+                <Button transparent>
+                  <Text>View</Text>
+                </Button>
+              </Right>
+            </ListItem><ListItem thumbnail>
+              <Left>
+                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
+              </Left>
+              <Body>
+                <Text>News Article</Text>
+                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
+              </Body>
+              <Right>
+                <Button transparent>
+                  <Text>View</Text>
+                </Button>
+              </Right>
+            </ListItem>
+          </List>
+        </Content>
+      </Container>
     );
   }
 }
-
