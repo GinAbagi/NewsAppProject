@@ -1,9 +1,11 @@
+//props import
 import React, { Component } from 'react';
 import { Container, Header, Content, Tab, Tabs, Left, Body, Right, Title } from 'native-base';
 import Tab1 from '../screens/tabs/tab1';
 import Tab2 from '../screens/tabs/tab2';
 import Tab3 from '../screens/tabs/tab3';
 
+//displays the tabs
 export default class TabsExample extends Component {
   render() {
     return (

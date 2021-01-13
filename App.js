@@ -1,5 +1,5 @@
+//props import
 import React from 'react';
-import  AppLoading  from 'expo-app-loading';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import TabScreen from './src/screens/TabScreen';
@@ -11,7 +11,7 @@ export default class App extends React.Component {
       isReady: false,
     };
   }
-
+//loads roboto font
   async componentDidMount() {
     await Font.loadAsync({
       Roboto: require('native-base/Fonts/Roboto.ttf'),
@@ -20,12 +20,8 @@ export default class App extends React.Component {
     });
     this.setState({ isReady: true });
   }
-
+//shows Tabscreen (app)
   render() {
-    if (!this.state.isReady) {
-      return <AppLoading />;
-    }
-
     return (
       <TabScreen/>
     );

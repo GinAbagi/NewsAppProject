@@ -1,3 +1,4 @@
+//props import
 import React, { Component } from 'react';
 import { Alert, View, ActivityIndicator, Text,  alert } from 'react-native';
 import { Container, Header, Content, List, ListItem, Thumbnail, Left, Body, Right, Button } from 'native-base';
@@ -16,18 +17,20 @@ export default class ListThumbnailExample extends Component {
       data: null
     }
   }
-
+//gets API info
   componentDidMount() {
     getArticles().then(data => {
       this.setState({
         isLoading: false,
         data: data
       });
+      //if not succeeded error
     }, error => {
       Alert.alert('Error', 'something went wrong!');
     }
     )
   }
+  //shows render screen
   render() {
     console.log(this.state.data);
 
@@ -37,7 +40,7 @@ export default class ListThumbnailExample extends Component {
         <Text style={{marginTop: 10}}>Please wait...</Text>
       </View>
     ) : (
-
+// loads data from API
       <List
           dataArray={this.state.data}
           renderRow={(item) =>{
@@ -46,7 +49,7 @@ export default class ListThumbnailExample extends Component {
           }}
           />
     )
-
+//Shows view content
     return (
       <Container>
         <Content>

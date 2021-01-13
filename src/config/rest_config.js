@@ -1,3 +1,4 @@
+//all API fetch info
 export const articles_url = 'http://newsapi.org/v2/top-headlines';
 export const country_code = 'nl';
 export const category = 'general';

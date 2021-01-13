@@ -1,3 +1,4 @@
+//props import
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
@@ -7,7 +8,7 @@ export default class tab2 extends Component {
     this.state = {
     };
   }
-
+//displays tab2
   render() {
     return (
       <View>

@@ -1,3 +1,4 @@
+//props import
 import React, {Component} from 'react-native';
 import { ListItem, Left, Thumbnail, Body, Text, Button } from 'native-base';
 
@@ -7,7 +8,7 @@ export default class DataItem extends Component {
         super(props);
         this.data = props.data;
     }
-
+//Article listitem
     render() {
         return(
             <ListItem thumbnail>
