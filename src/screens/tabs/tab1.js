@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Alert, alert } from 'react-native';
-import { Container, Header, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button } from 'native-base';
+import { Alert, View, ActivityIndicator, Text,  alert } from 'react-native';
+import { Container, Header, Content, List, ListItem, Thumbnail, Left, Body, Right, Button } from 'native-base';
+
+import DataItem  from '../../component/dataItem';
 
 import { getArticles } from '../../service/news';
 
@@ -28,69 +30,29 @@ export default class ListThumbnailExample extends Component {
   }
   render() {
     console.log(this.state.data);
+
+    let view = this.state.isLoading ? (
+      <View>
+        <ActivityIndicator animating={this.state.isLoading}/>
+        <Text style={{marginTop: 10}}>Please wait...</Text>
+      </View>
+    ) : (
+
+      <List
+          dataArray={this.state.data}
+          renderRow={(item) =>{
+            return (<DataItem data={item} />
+            )
+          }}
+          />
+    )
+
     return (
       <Container>
         <Content>
-          <List>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
-              </Left>
-              <Body>
-                <Text>News Article</Text>
-                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
-              </Left>
-              <Body>
-                <Text>News Article</Text>
-                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
-              </Left>
-              <Body>
-                <Text>News Article</Text>
-                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-            <ListItem thumbnail>
-              <Left>
-                <Thumbnail square source={{ uri: 'https://i.ibb.co/71p216S/verenigde-staten-usa-vs-new-york-city-hq-5a0ec5fea2a27.jpg' }} />
-              </Left>
-              <Body>
-                <Text>News Article</Text>
-                <Text note numberOfLines={2}>Its time to build a difference . . Its time to build a difference . . Its time to build a difference . .</Text>
-              </Body>
-              <Right>
-                <Button transparent>
-                  <Text>View</Text>
-                </Button>
-              </Right>
-            </ListItem>
-          </List>
+         {View} 
         </Content>
       </Container>
-          );
+          )
         }
       }
