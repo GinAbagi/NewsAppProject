@@ -5,7 +5,7 @@
 - Introductie
 - Het proces
 - Download links en instructie
-- Gebruikte taal
+- Gebruikte talen
 - verdere instructies
 - Feedback
 
@@ -71,7 +71,7 @@ Na het uitvoeren van deze stappen kunt u de applicatie bekijken.
 
 ---
 
-## **Gebruikte taal**
+## **Gebruikte talen**
 
 [![JavaScript](http://3con14.biz/code/_data/js/intro/js-logo.png)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
