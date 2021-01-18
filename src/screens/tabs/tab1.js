@@ -53,7 +53,7 @@ export default class ListThumbnailExample extends Component {
     return (
       <Container>
         <Content>
-         {View} 
+              {View} 
         </Content>
       </Container>
           )

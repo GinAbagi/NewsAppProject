@@ -27,7 +27,5 @@ export default class DataItem extends Component {
               </Right>
             </ListItem>
         );
-      
       }
-
     }

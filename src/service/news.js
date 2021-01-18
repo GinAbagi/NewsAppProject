@@ -1,12 +1,17 @@
 //fetch of the API
-import {articles_url, _api_key, category, country_code} from '../config/rest_config';
+import {
+    articles_url,
+    _api_key,
+    category,
+    country_code
+} from '../config/rest_config';
 
-    export async function getArticles() {
+export async function getArticles() {
 
-        try {
-            let articles = await fetch(`${articles_url}?country=${country_code}&
+    try {
+        let articles = await fetch(`${articles_url}?country=${country_code}&
             category=${category}`, {
-                headers: {
+            headers: {
                 'X-API-KEY': _api_key
             }
         });
@@ -15,8 +20,7 @@ import {articles_url, _api_key, category, country_code} from '../config/rest_con
         articles = null;
 
         return result.articles;
-    }
-    catch(error) {
+    } catch (error) {
         throw error;
     }
 }
